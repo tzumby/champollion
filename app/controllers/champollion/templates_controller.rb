@@ -1,62 +1,62 @@
 require_dependency "champollion/application_controller"
 
 module Champollion
-  class TemplatesController < ApplicationController
-    before_action :set_template, only: [:show, :edit, :update, :destroy]
+  class TranslationsController < ApplicationController
+    before_action :set_translation, only: [:show, :edit, :update, :destroy]
 
-    # GET /templates
+    # GET /translations
     def index
-      @templates = Template.all
+      @translation = Translation.all
     end
 
-    # GET /templates/1
+    # GET /translations/1
     def show
     end
 
-    # GET /templates/new
+    # GET /translations/new
     def new
-      @template = Template.new
+      @translation = Translation.new
     end
 
-    # GET /templates/1/edit
+    # GET /translations/1/edit
     def edit
     end
 
-    # POST /templates
+    # POST /translations
     def create
-      @template = Template.new(template_params)
+      @translation = Translation.new(translation_params)
 
-      if @template.save
-        redirect_to @template, notice: 'Template was successfully created.'
+      if @translation.save
+        redirect_to @translation, notice: 'Translation was successfully created.'
       else
         render :new
       end
     end
 
-    # PATCH/PUT /templates/1
+    # PATCH/PUT /translations/1
     def update
-      if @template.update(template_params)
-        redirect_to @template, notice: 'Template was successfully updated.'
+      if @translation.update(translation_params)
+        redirect_to @translation, notice: 'Translation was successfully updated.'
       else
         render :edit
       end
     end
 
-    # DELETE /templates/1
+    # DELETE /translations/1
     def destroy
-      @template.destroy
-      redirect_to templates_url, notice: 'Template was successfully destroyed.'
+      @translation.destroy
+      redirect_to translation_url, notice: 'Translation was successfully destroyed.'
     end
 
     private
       # Use callbacks to share common setup or constraints between actions.
-      def set_template
-        @template = Template.find(params[:id])
+      def set_translation
+        @template = Translation.find(params[:id])
       end
 
       # Only allow a trusted parameter "white list" through.
-      def template_params
-        params.require(:template).permit(:locale, :key, :value)
+      def translation_params
+        params.require(:translation).permit(:locale, :key, :value)
       end
   end
 end

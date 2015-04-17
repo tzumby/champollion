@@ -1,4 +1,5 @@
 Champollion::Engine.routes.draw do
   resources :templates
-  resources :templates
+
+  root 'templates#index'
 end
