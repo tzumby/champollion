@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @template.locale %>
+</p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @template.key %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @template.value %>
+</p>
+
+<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Back', templates_path %>
