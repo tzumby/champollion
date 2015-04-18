@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150417194342) do
 
-  create_table "champollion_templates", force: :cascade do |t|
+  create_table "champollion_translations", force: :cascade do |t|
     t.string   "locale"
     t.string   "key"
     t.text     "value"

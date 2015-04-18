@@ -1,6 +1,6 @@
-class CreateChampollionTemplates < ActiveRecord::Migration
+class CreateChampollionTranslations < ActiveRecord::Migration
   def change
-    create_table :champollion_templates do |t|
+    create_table :champollion_translations do |t|
       t.string :locale
       t.string :key
       t.text :value

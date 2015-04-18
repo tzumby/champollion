@@ -1,10 +1,10 @@
-<%= form_for(@template) do |f| %>
-  <% if @template.errors.any? %>
+<%= form_for(@translation) do |f| %>
+  <% if @translation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@template.errors.count, "error") %> prohibited this template from being saved:</h2>
+      <h2><%= pluralize(@translation.errors.count, "error") %> prohibited this translation from being saved:</h2>
 
       <ul>
-      <% @template.errors.full_messages.each do |message| %>
+      <% @translation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
