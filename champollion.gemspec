@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.2.1"
   s.add_dependency "i18n-active_record"
+  s.add_dependency "paper_trail", "~> 4.0.0.beta"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency 'rspec-rails'

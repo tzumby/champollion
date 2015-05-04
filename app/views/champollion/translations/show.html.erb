@@ -15,5 +15,14 @@
   <%= @translation.value %>
 </p>
 
+<p>
+  <h2>Versions</h2>
+  <ul>
+    <% @translation.versions.each do |version| %>
+      <li><%= version.event %> | <%= version.index %> @ <%= version.created_at %></li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_translation_path(@translation) %> |
 <%= link_to 'Back', translations_path %>
