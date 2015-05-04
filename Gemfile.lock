@@ -154,6 +154,7 @@ DEPENDENCIES
   champollion!
   factory_girl_rails
   i18n-active_record!
+  paper_trail (~> 4.0.0.beta)
   pry
   rspec-rails
   sqlite3

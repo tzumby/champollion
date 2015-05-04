@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'pry'
 gem 'i18n-active_record', path: '/home/razvan/code/locales/i18n-active_record'
+gem 'paper_trail', '~> 4.0.0.beta'
 
 # Declare your gem's dependencies in champollion.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
