@@ -11,14 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417194342) do
+ActiveRecord::Schema.define(version: 20150504185150) do
 
-  create_table "champollion_translations", force: :cascade do |t|
+  create_table "translations", force: :cascade do |t|
     t.string   "locale"
     t.string   "key"
     t.text     "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "interpolations"
+    t.boolean  "is_proc",        default: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
 end
