@@ -5,9 +5,6 @@ module Champollion
   RSpec.describe TranslationsController, :type => :controller do
     routes { Champollion::Engine.routes }
 
-    # This should return the minimal set of attributes required to create a valid
-    # Translation. As you add validations to Translation, be sure to
-    # adjust the attributes here as well.
     let(:valid_attributes) {
       {
         locale: :en,
@@ -22,9 +19,6 @@ module Champollion
       }
     }
 
-    # This should return the minimal set of values that should be in the session
-    # in order to pass any filters (e.g. authentication) defined in
-    # TranslationsController. Be sure to keep this updated too.
     let(:valid_session) { {} }
 
     describe "GET index" do
