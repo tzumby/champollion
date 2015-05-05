@@ -1,5 +1,4 @@
 require "paper_trail"
-#require "i18n/active_record"
 
 module Champollion
   class Engine < ::Rails::Engine
