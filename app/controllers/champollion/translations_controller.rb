@@ -6,7 +6,10 @@ module Champollion
 
     # GET /translations
     def index
-      @translations = Translation.all
+      respond_to do |format|
+        format.html { @translations = Translation.all }
+        format.json { render json: Translation.all_translations.to_json }
+      end
     end
 
     # GET /translations/1
@@ -56,7 +59,7 @@ module Champollion
 
       # Only allow a trusted parameter "white list" through.
       def translation_params
-        params.require(:translation).permit(:locale, :key, :value)
+        params.require(:translation).permit(:locale, :key, :value, :scope, :is_proc)
       end
   end
 end

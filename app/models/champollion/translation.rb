@@ -8,7 +8,7 @@ module Champollion
     validates :key, presence: true
     validates :value, presence: true
 
-    def self.all_translations(locale = nil)
+    def self.all_translations
       # create empty hash for locales
       translation_hash = Hash.new { |k,v| k[v] = {} }
 
