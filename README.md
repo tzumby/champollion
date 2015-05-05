@@ -1,5 +1,5 @@
-[![Code Climate](https://codeclimate.com/github/tzumby/champollion/badges/gpa.svg)](codeclimate)
-[![Build Status](https://travis-ci.org/tzumby/champollion.svg?branch=master)](travis)
+[![Code Climate](https://codeclimate.com/github/tzumby/champollion/badges/gpa.svg)][codeclimate]
+[![Build Status](https://travis-ci.org/tzumby/champollion.svg?branch=master)][travis]
 
 [travis]: https://travis-ci.org/tzumby/champollion
 [codeclimate]: https://codeclimate.com/github/tzumby/champollion
