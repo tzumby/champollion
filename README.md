@@ -21,7 +21,7 @@ mount Champollion::Engine => '/champollion'
 Import migrations in your Rails application
 
 ```
-bundle exec rake champollion:install:migration
+bundle exec rake champollion:install:migrations
 ```
 
 Run the migrations
