@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Champollion::VERSION
   s.authors     = ["Razvan"]
   s.email       = ["tzumby@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Champollion."
-  s.description = "TODO: Description of Champollion."
+  s.homepage    = "http://github.com/tzumby/champollion"
+  s.summary     = "Champollion is a Rails engine that allows storing I18n translation in a database."
+  s.description = "Rails engine for I18n translations"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
