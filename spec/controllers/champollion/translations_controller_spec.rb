@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 module Champollion
   RSpec.describe TranslationsController, :type => :controller do

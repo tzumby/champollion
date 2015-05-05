@@ -1,16 +1,16 @@
+GIT
+  remote: git://github.com/svenfuchs/i18n-active_record.git
+  revision: 2d9a22b6a4e5d809782cdbfa65b14d9e47aa27fc
+  specs:
+    i18n-active_record (0.0.2)
+      i18n (>= 0.5.0)
+
 PATH
   remote: .
   specs:
     champollion (0.0.1)
-      i18n-active_record
       paper_trail (~> 4.0.0.beta)
       rails (~> 4.2.1)
-
-PATH
-  remote: /home/razvan/code/locales/i18n-active_record
-  specs:
-    i18n-active_record (0.0.2)
-      i18n (>= 0.5.0)
 
 GEM
   remote: https://rubygems.org/
@@ -58,7 +58,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    coderay (1.1.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     factory_girl (4.5.0)
@@ -74,7 +73,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    method_source (0.8.2)
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.6.0)
@@ -83,10 +81,6 @@ GEM
     paper_trail (4.0.0.beta2)
       activerecord (>= 3.0, < 6.0)
       activesupport (>= 3.0, < 6.0)
-    pry (0.10.1)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -131,7 +125,6 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
-    slop (3.6.0)
     sprockets (3.0.3)
       rack (~> 1.0)
     sprockets-rails (2.2.4)
@@ -154,7 +147,5 @@ DEPENDENCIES
   champollion!
   factory_girl_rails
   i18n-active_record!
-  paper_trail (~> 4.0.0.beta)
-  pry
   rspec-rails
   sqlite3

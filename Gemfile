@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'pry'
-gem 'i18n-active_record', path: '/home/razvan/code/locales/i18n-active_record'
-gem 'paper_trail', '~> 4.0.0.beta'
-
 # Declare your gem's dependencies in champollion.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
@@ -17,3 +13,4 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+gem 'i18n-active_record', :git => 'git://github.com/svenfuchs/i18n-active_record.git'
