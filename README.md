@@ -24,6 +24,12 @@ Import migrations in your Rails application
 bundle exec rake champollion:install:migration
 ```
 
+Run the migrations
+
+```
+bundle exec rake db:migrate
+```
+
 ### Revisions
 This engine uses the paper_trail gem to keep track of translation versions and authors. The default views will show all the revision dates and authors.
 
