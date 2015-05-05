@@ -23,6 +23,15 @@
     <%= f.label :value %><br>
     <%= f.text_area :value %>
   </div>
+  <div class="field">
+    <%= f.label :interpolations %><br>
+    <%= f.text_field :interpolations %>
+  </div>
+  <div class="field">
+    <%= f.label :is_proc %><br>
+    <%= f.check_box :is_proc %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

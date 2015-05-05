@@ -59,7 +59,7 @@ module Champollion
 
       # Only allow a trusted parameter "white list" through.
       def translation_params
-        params.require(:translation).permit(:locale, :key, :value, :scope, :is_proc)
+        params.require(:translation).permit(:locale, :key, :value, :interpolations, :is_proc)
       end
   end
 end
