@@ -1,4 +1,8 @@
-[![Code Climate](https://codeclimate.com/github/tzumby/champollion/badges/gpa.svg)](https://codeclimate.com/github/tzumby/champollion)
+[![Code Climate](https://codeclimate.com/github/tzumby/champollion/badges/gpa.svg)](codeclimate)
+[![Build Status](https://travis-ci.org/tzumby/champollion.svg?branch=master)](travis)
+
+[travis]: https://travis-ci.org/tzumby/champollion
+[codeclimate]: https://codeclimate.com/github/tzumby/champollion
 
 # Champollion
 Champollion is a Rails engine that allows storing I18n translation in a database. The engine also integrates with front-end Angular translations by providing a controller action with a json response that a plugin like  [angular-translate](https://github.com/angular-translate/angular-translate "Angular Translate")  can pick up and use.
