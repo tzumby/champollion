@@ -5,7 +5,7 @@ Champollion is a Rails engine that allows storing I18n translation in a database
 
 ## Rails 4.2
 
-Add the gem in your Gemfile:
+Add the gem in your Gemfile. Note that for now you will have to include the i18n-active_record gem as a dependency in the Rails application because the latest stable gem is on a separate git repository.
 
 ```
 gem 'i18n-active_record', :git => 'git://github.com/svenfuchs/i18n-active_record.git', :require => 'i18n/active_record'
