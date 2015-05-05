@@ -20,12 +20,12 @@ Gem::Specification.new do |s|
 
   s.require_paths = %w(lib)
 
-  s.add_dependency "rails", "~> 4.2.1"
-  s.add_dependency "paper_trail", "~> 4.0.0.beta"
+  s.add_runtime_dependency 'rails', '~> 4.2', '>= 4.2.1'
+  s.add_runtime_dependency "paper_trail", "~> 4.0.0.beta"
 
-  s.add_development_dependency "sqlite3"
-  s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'capybara'
-  s.add_development_dependency 'factory_girl_rails'
+  s.add_development_dependency "sqlite3", "~> 0"
+  s.add_development_dependency 'rspec-rails', "~> 0"
+  s.add_development_dependency 'capybara', "~> 0"
+  s.add_development_dependency 'factory_girl_rails', "~> 0"
 
 end
