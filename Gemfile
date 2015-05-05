@@ -13,4 +13,7 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'i18n-active_record', :git => 'git://github.com/svenfuchs/i18n-active_record.git'
+group :test do
+  gem "codeclimate-test-reporter"
+  gem "i18n-active_record", :git => "git://github.com/svenfuchs/i18n-active_record.git"
+end
