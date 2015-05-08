@@ -37,6 +37,34 @@ Run the migrations
 bundle exec rake db:migrate
 ```
 
+### Views and Assets
+By default Champollion expects you to install Twitter Bootstrap inside your main application. All the views utilize Twitter Bootstrap ids and classes but you also have the option to generate the views and customize them to your own needs. 
+
+To copy over the assets files run the following inside your host application
+
+```
+bundle exec rails g champollion:assets
+```
+
+This command will create the following files and folders:
+
+* app/assets/javascripts/champollion
+  * application.js
+* app/assets/stylesheets/champollion
+  * application.css
+  * base.css
+
+Assuming you want to use Twitter Bootstrap to style the views you will have to perform a few steps. This guide assumes you are using the 'bootstrap-sass' gem. 
+
+* Rename your app/assets/stylesheets/champollion/application.css to app/assets/stylesheets/champollion/application.scss
+* Include twitter bootstrap in your champollion css manifest:
+  ```
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+  
+  body { padding-top: 60px;}
+  ```
+
 ### Revisions
 This engine uses the paper_trail gem to keep track of translation versions and authors. The default views will show all the revision dates and authors.
 
