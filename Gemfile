@@ -14,6 +14,5 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :test do
-  gem "codeclimate-test-reporter"
   gem "i18n-active_record", :git => "git://github.com/svenfuchs/i18n-active_record.git"
 end
