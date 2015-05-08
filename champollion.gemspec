@@ -27,6 +27,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec-rails', "~> 3.2", '>= 3.2.0'
   s.add_development_dependency 'capybara', "~> 2.4", '>= 2.4.1'
   s.add_development_dependency 'factory_girl_rails', "~> 4.5", '>= 4.5.0'
-  s.add_development_dependency 'generator_spec'
-  s.add_development_dependency 'codeclimate-test-reporter'
+  s.add_development_dependency 'generator_spec', "~> 0.9", ">= 0.9.3"
+  s.add_development_dependency 'codeclimate-test-reporter', "~> 0.4", ">= 0.4.7"
 end
