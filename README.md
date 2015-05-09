@@ -38,6 +38,14 @@ bundle exec rake db:migrate
 ```
 
 ### Views and Assets
+
+#### Twitter Bootstrap
+Add the the bootstrap-sass gem to your Gemfile
+
+```
+gem 'bootstrap-sass'
+```
+
 By default Champollion expects you to install Twitter Bootstrap inside your main application. All the views utilize Twitter Bootstrap ids and classes but you also have the option to generate the views and customize them to your own needs. 
 
 To copy over the assets files run the following inside your host application
@@ -58,12 +66,60 @@ Assuming you want to use Twitter Bootstrap to style the views you will have to p
 
 * Rename your app/assets/stylesheets/champollion/application.css to app/assets/stylesheets/champollion/application.scss
 * Include twitter bootstrap in your champollion css manifest:
+* 
   ```
   @import "bootstrap-sprockets";
   @import "bootstrap";
   
   body { padding-top: 60px;}
   ```
+
+### Interpolations
+Interpolations work as you would expect. Create your key and value as you normally would in your locale yml files:
+
+* key: 'home.hello'
+* value: 'Welcome %{name}'
+* interpolations: name
+
+In your view translate it with 
+
+```
+<%= t ('home.hello', name: "Jack") %>
+```
+
+This will result in : "Welcome Jack"
+
+### Lambdas
+Lambdas work as expected as well, define your translation as follows:
+
+* key: 'salutation'
+* value: 'Proc.new { |values| values.first == 'm' ? "Mr. %{name}" : "Mrs. %{name}" }'
+* interpolations: name
+* is_proc: true
+
+
+```
+<%= t('salutation', {:gender => "m", :name => "Paul"}) %>
+```
+
+This will result in "Mr. Paul"
+
+
+### Switching locales using URL parameters
+One common way to switch language based on parameters would be to create an Application controller before filter that sets the locale according to a params[:locale] parameter. 
+
+```
+# app/controllers/application_controller.rb
+class ApplicationController < ActionController::Base
+  before_action :set_locale
+ 
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+end
+```
+
+Be sure to check out the [official Rails docs on I18n](http://guides.rubyonrails.org/i18n.html#setting-the-locale-from-the-url-params) for more examples. 
 
 ### Revisions
 This engine uses the paper_trail gem to keep track of translation versions and authors. The default views will show all the revision dates and authors.
@@ -83,3 +139,10 @@ $translateProvider.useStaticFilesLoader({
 
 ## Note
 This gem is still under active development and not production ready.
+
+## TO DO
+
+* Add pagination and search (filter by locale)
+* Change locale input to a drop down and allow creation of the locales available
+* Add support for environments (create translations for development, staging and production for example)
+* Integrate with Devise for Authentication

@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Current Version</h2>
+
 <p>
   <strong>Locale:</strong>
   <%= @translation.locale %>
@@ -15,12 +17,41 @@
   <%= @translation.value %>
 </p>
 
-<p>
-  <h2>Versions</h2>
+<hr/>
+
+  <h2>Last 5 Revisions</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Event</th>
+        <td>Date Modified</th>
+        <th>Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @translation.last_five.each do |version| %>
+        <tr>
+          <td><%= version.index %></td>
+          <td><%= version.event %></td>
+          <td><%= version.created_at %></td>
+          <td>
+            <% unless version.reify.nil? %>
+              <dl class="dl-horizontal">
+                <dt>locale</dt>
+                <dd><%= version.reify.locale %></dd>
+                <dt>key</dt>
+                <dd><%= version.reify.key %></dd>
+                <dt>value</dt>
+                <dd><%= version.reify.value %></dd>
+              </dl>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
   <ul>
-    <% @translation.versions.each do |version| %>
-      <li><%= version.event %> | <%= version.index %> @ <%= version.created_at %></li>
-    <% end %>
   </ul>
 </p>
 
