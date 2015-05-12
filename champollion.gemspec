@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'rails', '~> 4.2', '>= 4.2.1'
   s.add_runtime_dependency 'paper_trail', '~> 4.0.0.beta'
-  s.add_runtime_dependency 'bootstrap_form', '~> 2.1.0'
+  s.add_runtime_dependency 'bootstrap_form', '~> 2.1', '>= 2.1.0'
 
   s.add_development_dependency "sqlite3", "~> 1.3", '>= 1.3.1'
   s.add_development_dependency 'rspec-rails', "~> 3.2", '>= 3.2.0'
