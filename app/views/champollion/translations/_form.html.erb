@@ -1,38 +1,8 @@
-<%= form_for(@translation) do |f| %>
-  <% if @translation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@translation.errors.count, "error") %> prohibited this translation from being saved:</h2>
-
-      <ul>
-      <% @translation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :locale %><br>
-    <%= f.text_field :locale %>
-  </div>
-  <div class="field">
-    <%= f.label :key %><br>
-    <%= f.text_field :key %>
-  </div>
-  <div class="field">
-    <%= f.label :value %><br>
-    <%= f.text_area :value %>
-  </div>
-  <div class="field">
-    <%= f.label :interpolations %><br>
-    <%= f.text_field :interpolations %>
-  </div>
-  <div class="field">
-    <%= f.label :is_proc %><br>
-    <%= f.check_box :is_proc %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= bootstrap_form_for(@translation) do |f| %>
+  <%= f.text_field :locale %>
+  <%= f.text_field :key %>
+  <%= f.text_area :value %>
+  <%= f.text_field :interpolations %>
+  <%= f.check_box :is_proc %>
+  <%= f.submit 'Create' %>
 <% end %>

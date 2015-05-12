@@ -6,9 +6,9 @@ module Champollion
 
     validates :locale, presence: true
     validates :key, presence: true
-    validates :value, presence: true
 
-    def self.all_translations
+
+    def self.all_hash
       # create empty hash for locales
       translation_hash = Hash.new { |k,v| k[v] = {} }
 
@@ -18,10 +18,14 @@ module Champollion
         key_scopes = translation.key.split(".")
 
         translation_hash[translation.locale.to_sym] ||= {}
-        translation_hash[translation.locale.to_sym].merge!(key_scopes.reverse.inject(translation.value) {|a,n| { n.to_sym => a}})
+        translation_hash[translation.locale.to_sym].deep_merge!(key_scopes.reverse.inject(translation.value) {|a,n| { n.to_sym => a}})
       end
 
       translation_hash 
+    end
+
+    def last_five
+      versions.reverse.first(5).reject {|t| t.index == 0 }
     end
   end
 end

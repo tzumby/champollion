@@ -8,7 +8,7 @@ module Champollion
     def index
       respond_to do |format|
         format.html { @translations = Translation.all }
-        format.json { render json: Translation.all_translations.to_json }
+        format.json { render json: Translation.all_hash.to_json }
       end
     end
 

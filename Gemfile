@@ -14,5 +14,6 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :test do
-  gem "i18n-active_record", :git => "git://github.com/svenfuchs/i18n-active_record.git"
+  gem "pry"
+  gem "i18n-active_record", path: '~/code/rails/champ/i18n-active_record'#:git => "git://github.com/svenfuchs/i18n-active_record.git"
 end
