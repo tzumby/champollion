@@ -83,3 +83,12 @@ $translateProvider.useStaticFilesLoader({
 
 ## Note
 This gem is still under active development and not production ready.
+
+## TO DO
+
+* Integrate with Devise for Authentication
+* Add pagination and search (filter by locale)
+* Tie translations to repository branches (ie. allow translation for text on a specific branch to happen in parallel with translations on a different branch). Allow merging of translations
+* Change locale input to a drop down and allow creation of the locales available
+* Add support for environments (create translations for development, staging and production for example)
+
