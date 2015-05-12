@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/champollion.svg)[badge]
 [![Code Climate](https://codeclimate.com/github/tzumby/champollion/badges/gpa.svg)][codeclimate]
 [![Build Status](https://travis-ci.org/tzumby/champollion.svg?branch=master)][travis]
 [![Test Coverage](https://codeclimate.com/github/tzumby/champollion/badges/coverage.svg)][codecoverage]
@@ -5,6 +6,7 @@
 [travis]: https://travis-ci.org/tzumby/champollion
 [codeclimate]: https://codeclimate.com/github/tzumby/champollion
 [codecoverage]: https://codeclimate.com/github/tzumby/champollion/coverage
+[badge]: http://badge.fury.io/rb/champollion
 
 
 # Champollion
