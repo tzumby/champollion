@@ -1,5 +1,6 @@
 require "paper_trail"
 require "bootstrap_form"
+require "kaminari"
 
 module Champollion
   class Engine < ::Rails::Engine

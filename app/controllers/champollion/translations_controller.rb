@@ -7,7 +7,7 @@ module Champollion
     # GET /translations
     def index
       respond_to do |format|
-        format.html { @translations = Translation.all }
+        format.html { @translations = Translation.all.page(params[:page]).per(params[:per]) }
         format.json { render json: Translation.all_hash.to_json }
       end
     end
